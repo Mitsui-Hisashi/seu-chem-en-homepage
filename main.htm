@@ -48,11 +48,32 @@
     </div>
   </div>
 
-  <div id="main-content">
-    <div id="main-content-inner" >
-      
-      <div id="right" >
-       
+  <!-- 轮播图部分 -->
+  <div class="wrapper" id="picture">
+    <div class="inner">
+      <div class="mod1">
+        <div class="ml" frag="面板3">
+          <div class="post post-3 mbox" frag="窗口3">
+            <div class="con">
+              <div frag="窗口内容"> &nbsp;窗口内容 </div>
+              <div class="slider"></div>
+            </div>
+          </div>
+          <div frag="窗口9">
+            <div frag="窗口内容">窗口内容</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--主页子栏目-->
+  <!--<div id="main-content">
+    <div id="main-content-inner">
+
+      <div id="right">
+
         <div class="main-group" style="margin-top:25px;">
 
           <div class="news" style="margin-left:70px;margin-right: 20px; width:250px; float:left;">
@@ -68,7 +89,7 @@
                     <div frag="窗口内容">
                       <div class="title">
                         <span class="text">{标题}</span>
-                      
+
                       </div>
                     </div>
                   </div>
@@ -90,7 +111,7 @@
                     <div frag="窗口内容">
                       <div class="title">
                         <span class="text">{标题}</span>
-                        <!-- <span class="date">{发布时间(MM-dd)}</span> -->
+                        
                       </div>
                     </div>
                   </div>
@@ -112,7 +133,6 @@
                     <div frag="窗口内容">
                       <div class="title">
                         <span class="text">{标题}</span>
-                        <!-- <span class="date">{发布时间(MM-dd)}</span> -->
                       </div>
                     </div>
                   </div>
@@ -143,17 +163,19 @@
           </div>
           <div class="clear"></div>
         </div>
-        
+
       </div>
       <div class="clear"></div>
     </div>
-  </div>
+  </div>-->
+
+
 
   <div id="bottom">
     <div class="bottom-content">
       <!--<img id="school-icon" src="asset/img/school-icon.png" />-->
       <p id="copyright">
-        Copyright © 2014 School of Chemistry and Chemical Engineering, SEU  All Rights Reserved<br />
+        Copyright © 2014 School of Chemistry and Chemical Engineering, SEU All Rights Reserved<br />
         通讯地址：江苏省南京市江宁区东南大学路2号化学化工学院 <br />
         办公地址：九龙湖校区化工楼<br />
         邮编：211189 <br />
@@ -165,4 +187,32 @@
       </p>
     </div>
   </div>
+</body>
+
+<script>
+  $(function () {
+    //设置轮播图
+    $(".slider").sudyfocus({
+      p: 3,
+      zWidth: 1000,
+      zHeight: 400,
+      pagination: true,
+      navigation: true,
+      response: true,
+      title: {
+        isAutoWidth: true,
+        href: false
+      }
+    });
+    $('.slider').css('height', '400px')
+    $('.focus-container').css('height', '400px')
+    $(window).resize(function () {
+      $('.slider').css('height', '400px')
+      $('.focus-container').css('height', '400px')
+    });
+
+  });
+
+</script>
+
 </html>
